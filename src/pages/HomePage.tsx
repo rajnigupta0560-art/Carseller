@@ -804,14 +804,17 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 6. THE 3-STEP "AUTOTRUST PURCHASE JOURNEY" */}
-      <section className="bg-slate-50 dark:bg-slate-900/40 py-16 sm:py-20 border-y border-slate-200/80 dark:border-slate-800">
+      <section
+        id="why-us"
+        className="scroll-mt-24 bg-slate-50 dark:bg-slate-900/40 py-16 sm:py-20 border-y border-slate-200/80 dark:border-slate-800"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
             <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-              Transparent & 100% Risk-Free
+              Why AutoTrust • Transparent & 100% Risk-Free
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">
-              How Buying From AutoTrust Works
+              Why 8,500+ Buyers Choose AutoTrust
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
               Three transparent steps to get behind the wheel without anxiety or dealership pressure.

@@ -99,6 +99,9 @@ export const Footer: React.FC = () => {
                 <Link to="/inventory?transmission=Automatic" className="hover:text-white transition">Automatic Cars</Link>
               </li>
               <li>
+                <Link to="/#why-us" className="hover:text-white transition text-blue-400 font-semibold">Why AutoTrust Guarantee</Link>
+              </li>
+              <li>
                 <Link to="/sell-car" className="hover:text-white transition text-amber-400 font-semibold">Sell Your Car (Instant Valuation)</Link>
               </li>
               <li>

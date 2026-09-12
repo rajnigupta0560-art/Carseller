@@ -89,6 +89,18 @@ export const Navbar: React.FC = () => {
     }
   };
 
+  const handleWhyUsClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const el = document.getElementById('why-us');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', '/#why-us');
+      }
+    }
+    setMobileMenuOpen(false);
+  };
+
   const handleCitySelect = (cityName: string) => {
     setSelectedCity(cityName);
     setCityDropdownOpen(false);
@@ -290,6 +302,7 @@ export const Navbar: React.FC = () => {
 
               <Link
                 to="/#why-us"
+                onClick={handleWhyUsClick}
                 className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
               >
                 Why AutoTrust
@@ -488,12 +501,12 @@ export const Navbar: React.FC = () => {
           <div className="space-y-1 pt-2 border-t border-slate-100 dark:border-slate-800">
             <Link
               to="/#why-us"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={handleWhyUsClick}
               className="flex items-center justify-between py-2 px-3 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900"
             >
               <div className="flex items-center gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <span>140+ Points Inspection Guarantee</span>
+                <span>Why AutoTrust (140+ Checks & Warranty)</span>
               </div>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             </Link>

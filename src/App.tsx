@@ -13,13 +13,24 @@ import { CarDetailPage } from './pages/CarDetailPage';
 import { SellCarPage } from './pages/SellCarPage';
 import { AdminPage } from './pages/AdminPage';
 
-// Scroll to top on route change
+// Scroll to top on route change or scroll to hash target
 function ScrollToTop() {
-  const { pathname, search } = useLocation();
+  const { pathname, search, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname, search]);
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      const timer = setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, search, hash]);
 
   return null;
 }
