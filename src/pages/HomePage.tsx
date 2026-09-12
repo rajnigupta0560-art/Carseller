@@ -147,12 +147,12 @@ export const HomePage: React.FC = () => {
   return (
     <div className="space-y-16 sm:space-y-24 pb-20 overflow-x-hidden">
       {/* 1. CINEMATIC LUXURY HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-[#0b0f19] text-white pt-10 pb-20 lg:pt-16 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-50/80 via-blue-50/30 to-slate-100/60 dark:from-slate-950 dark:via-slate-900 dark:to-[#0b0f19] pt-10 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
         {/* Background Decorative Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full overflow-hidden pointer-events-none opacity-25">
-          <div className="absolute -top-32 -left-20 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-indigo-600 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-emerald-600 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full overflow-hidden pointer-events-none opacity-40 dark:opacity-25">
+          <div className="absolute -top-32 -left-20 w-96 h-96 bg-blue-400/20 dark:bg-blue-600 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-indigo-300/20 dark:bg-indigo-600 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-emerald-300/15 dark:bg-emerald-600 rounded-full blur-3xl opacity-30"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -160,27 +160,27 @@ export const HomePage: React.FC = () => {
             {/* Left Column: Headlines & Multi-Tab Concierge Search */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/15 border border-blue-200 dark:border-blue-400/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
                 <span>Certified Pre-Owned Excellence • 140+ Points Check</span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-heading leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-heading leading-[1.12] text-slate-900 dark:text-white">
                 The Smarter Way to Buy & Sell Certified Cars.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 dark:from-blue-400 dark:via-indigo-300 dark:to-emerald-400">
                   Zero Worries.
                 </span>
               </h1>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
                 Skip traditional dealer haggling and unverified repairs. Handpicked inventory with 1-Year Free Warranty, 5-Day Money-Back Guarantee, and doorstep test drives.
               </p>
 
               {/* INTERACTIVE MULTI-TAB CONCIERGE SEARCH CARD */}
-              <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-3xl p-4 sm:p-5 shadow-2xl border border-white/20 dark:border-slate-800 text-slate-900 dark:text-white transition-all">
+              <div className="bg-white dark:bg-slate-900/95 rounded-3xl p-4 sm:p-5 shadow-xl shadow-slate-200/50 dark:shadow-2xl border border-slate-200/90 dark:border-slate-800 text-slate-900 dark:text-white transition-all">
                 {/* Search Tabs Header */}
-                <div className="flex items-center gap-2 pb-4 mb-4 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-2 pb-4 mb-4 border-b border-slate-100 dark:border-slate-800">
                   <button
                     type="button"
                     onClick={() => setSearchTab('buy')}
@@ -393,29 +393,29 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* Popular Quick Category Shortcuts */}
-              <div className="flex flex-wrap items-center gap-2 pt-1 text-xs text-slate-300">
-                <span className="text-slate-400 font-semibold text-[11px]">Trending:</span>
+              <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                <span className="text-slate-500 dark:text-slate-400 font-semibold text-[11px]">Trending:</span>
                 <Link
                   to="/inventory?body=SUV"
-                  className="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 transition text-[11px] font-medium"
+                  className="px-3 py-1 rounded-full bg-white dark:bg-white/10 hover:bg-slate-100 dark:hover:bg-white/20 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-300 transition text-[11px] font-medium shadow-2xs"
                 >
                   🚙 SUVs ({suvCount})
                 </Link>
                 <Link
                   to="/inventory?transmission=Automatic"
-                  className="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 transition text-[11px] font-medium"
+                  className="px-3 py-1 rounded-full bg-white dark:bg-white/10 hover:bg-slate-100 dark:hover:bg-white/20 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-300 transition text-[11px] font-medium shadow-2xs"
                 >
                   ⚡ Automatics
                 </Link>
                 <Link
                   to="/inventory?budget=under-8"
-                  className="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 transition text-[11px] font-medium"
+                  className="px-3 py-1 rounded-full bg-white dark:bg-white/10 hover:bg-slate-100 dark:hover:bg-white/20 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-300 transition text-[11px] font-medium shadow-2xs"
                 >
                   💰 Under ₹8 Lakh
                 </Link>
                 <Link
                   to="/sell-car"
-                  className="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 hover:bg-amber-400/30 border border-amber-400/40 text-[11px] font-bold transition"
+                  className="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-400/20 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-400/30 border border-amber-300 dark:border-amber-400/40 text-[11px] font-bold transition"
                 >
                   Sell My Car →
                 </Link>
@@ -424,14 +424,14 @@ export const HomePage: React.FC = () => {
 
             {/* Right Column: Hero Flagship Car Showcase Card with Hotspots */}
             <div className="lg:col-span-5 relative mt-6 lg:mt-0">
-              <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden bg-gradient-to-tr from-slate-800 to-slate-900 border border-slate-700/80 shadow-2xl p-4 sm:p-5 group">
+              <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden bg-white dark:bg-gradient-to-tr dark:from-slate-800 dark:to-slate-900 border border-slate-200/90 dark:border-slate-700/80 shadow-xl shadow-slate-200/60 dark:shadow-2xl p-4 sm:p-5 group">
                 {/* Header Tag */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-extrabold flex items-center gap-1.5 border border-emerald-500/30">
+                  <span className="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-[11px] font-extrabold flex items-center gap-1.5 border border-emerald-200 dark:border-emerald-500/30">
                     <Check className="w-3.5 h-3.5" />
                     <span>AutoTrust Certified #1</span>
                   </span>
-                  <div className="flex items-center gap-1 text-amber-400 text-xs font-bold">
+                  <div className="flex items-center gap-1 text-amber-500 dark:text-amber-400 text-xs font-bold">
                     <Star className="w-4 h-4 fill-current" />
                     <span>98/100 Inspection Score</span>
                   </div>
@@ -444,7 +444,7 @@ export const HomePage: React.FC = () => {
                     alt="2023 Hyundai Creta SX (O)"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
 
                   <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
                     <div>
@@ -454,7 +454,7 @@ export const HomePage: React.FC = () => {
                       <p className="text-xs text-slate-300">18,500 km • Diesel • Automatic</p>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs text-slate-400 block">All-Inclusive</span>
+                      <span className="text-xs text-slate-300 block">All-Inclusive</span>
                       <span className="text-base font-black text-white font-mono">₹14.85 Lakh</span>
                     </div>
                   </div>
@@ -462,28 +462,28 @@ export const HomePage: React.FC = () => {
 
                 {/* Interactive Hotspot Feature Cards */}
                 <div className="grid grid-cols-3 gap-2 mt-3 text-center">
-                  <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/60">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400 mx-auto mb-1" />
-                    <span className="text-[10px] font-bold text-slate-200 block">140+ Checks</span>
-                    <span className="text-[9px] text-slate-400 block">Non-Accidental</span>
+                  <div className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mx-auto mb-1" />
+                    <span className="text-[10px] font-bold text-slate-800 dark:text-slate-200 block">140+ Checks</span>
+                    <span className="text-[9px] text-slate-500 dark:text-slate-400 block">Non-Accidental</span>
                   </div>
-                  <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/60">
-                    <RotateCcw className="w-4 h-4 text-blue-400 mx-auto mb-1" />
-                    <span className="text-[10px] font-bold text-slate-200 block">5-Day Return</span>
-                    <span className="text-[9px] text-slate-400 block">100% Refund</span>
+                  <div className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60">
+                    <RotateCcw className="w-4 h-4 text-blue-600 dark:text-blue-400 mx-auto mb-1" />
+                    <span className="text-[10px] font-bold text-slate-800 dark:text-slate-200 block">5-Day Return</span>
+                    <span className="text-[9px] text-slate-500 dark:text-slate-400 block">100% Refund</span>
                   </div>
-                  <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/60">
-                    <Award className="w-4 h-4 text-amber-400 mx-auto mb-1" />
-                    <span className="text-[10px] font-bold text-slate-200 block">1-Yr Warranty</span>
-                    <span className="text-[9px] text-slate-400 block">Free Roadside</span>
+                  <div className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/60">
+                    <Award className="w-4 h-4 text-amber-500 dark:text-amber-400 mx-auto mb-1" />
+                    <span className="text-[10px] font-bold text-slate-800 dark:text-slate-200 block">1-Yr Warranty</span>
+                    <span className="text-[9px] text-slate-500 dark:text-slate-400 block">Free Roadside</span>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-400">Doorstep test drive available today</span>
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400">Doorstep test drive available today</span>
                   <Link
                     to="/inventory/car-1"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-blue-400 hover:text-blue-300 transition"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
                   >
                     <span>View Car Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -496,25 +496,25 @@ export const HomePage: React.FC = () => {
 
         {/* 2. FLOATING DEALERSHIP METRICS STRIP */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-3xl bg-slate-800/70 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-700/60 dark:border-slate-800 text-center shadow-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 text-center shadow-lg shadow-slate-200/50 dark:shadow-xl">
             <div className="space-y-0.5">
-              <div className="text-2xl sm:text-3xl font-black text-white font-heading">{DEALERSHIP.carsSold}</div>
-              <div className="text-xs text-slate-400 font-medium">Happy Drivers Served</div>
+              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-heading">{DEALERSHIP.carsSold}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Happy Drivers Served</div>
             </div>
             <div className="space-y-0.5">
-              <div className="text-2xl sm:text-3xl font-black text-emerald-400 font-heading">140+ Checks</div>
-              <div className="text-xs text-slate-400 font-medium">Certified Inspection</div>
+              <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 font-heading">140+ Checks</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Certified Inspection</div>
             </div>
             <div className="space-y-0.5">
-              <div className="text-2xl sm:text-3xl font-black text-blue-400 font-heading">1-Year Free</div>
-              <div className="text-xs text-slate-400 font-medium">Comprehensive Warranty</div>
+              <div className="text-2xl sm:text-3xl font-black text-blue-600 dark:text-blue-400 font-heading">1-Year Free</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Comprehensive Warranty</div>
             </div>
             <div className="space-y-0.5">
-              <div className="text-2xl sm:text-3xl font-black text-amber-400 font-heading flex items-center justify-center gap-1">
+              <div className="text-2xl sm:text-3xl font-black text-amber-500 dark:text-amber-400 font-heading flex items-center justify-center gap-1">
                 <span>{DEALERSHIP.googleRating}</span>
                 <Star className="w-5 h-5 fill-amber-400 text-amber-400 inline" />
               </div>
-              <div className="text-xs text-slate-400 font-medium">{DEALERSHIP.googleReviewCount}+ Google Reviews</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">{DEALERSHIP.googleReviewCount}+ Google Reviews</div>
             </div>
           </div>
         </div>
